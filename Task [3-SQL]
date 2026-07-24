@@ -1,0 +1,23 @@
+The database schema consists of four tables:
+        Product(maker, model, type)
+        PC(code, model, speed, ram, hd, cd, price)
+        Laptop(code, model, speed, ram, hd, price, screen)
+        Printer(code, model, color, type, price)
+
+The Product table represents the manufacturer (maker), model number (model), and type ('PC', 'Laptop', or 'Printer'). It is assumed that model numbers in the Product table are unique across all manufacturers and product types. 
+
+In the PC table, each personal computer is uniquely identified by a primary key - code. It contains the model number - model (a foreign key referencing the Product table), processor speed - speed (in megahertz), RAM capacity - ram (in megabytes), hard drive size - hd (in gigabytes), CD-ROM drive speed - cd (e.g., '4x'), and price - price (in USD). 
+
+The Laptop table is similar to the PC table, except that instead of CD drive speed, it contains the screen size - screen (in inches). 
+
+In the Printer table, each printer model indicates whether it is a color printer - color ('y' for color), the printer type - type ('Laser', 'Jet', or 'Matrix'), and the price - price.
+
+TASK:
+
+Find the model number, memory capacity, and screen size of laptops that cost more than $1,000.
+
+MY SOLUTION:
+
+SELECT model, ram, screen
+FROM Laptop
+WHERE price > 1000;
