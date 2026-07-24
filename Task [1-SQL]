@@ -12,7 +12,7 @@ The Laptop table is similar to the PC table, except that instead of CD drive spe
 
 In the Printer table, each printer model indicates whether it is a color printer - color ('y' for color), the printer type - type ('Laser', 'Jet', or 'Matrix'), and the price - price.
 
-<H3>TASK:</H3>
+TASK:
 
 Find the model number, speed, and size of the hard drive for all PCs that cost less than $500. Output: model, speed, and hd.
 
